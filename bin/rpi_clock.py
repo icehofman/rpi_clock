@@ -333,7 +333,7 @@ def display_main_procedure():
         display_cur_temp.config(fg=FG_COLOR_ABNORMAL)
         display_cur_cond.config(fg=FG_COLOR_ABNORMAL)
         display_cur_temp.config(text="%s" % (str_temp))
-    display_cur_cond.config(text="%s" % str_condition)
+    display_cur_cond.config(text="%s" % str_condition.capitalize())
     if parms.FLAG_TRACING:
         parms.logger.debug("display_main_procedure going back to sleep")
     tk_root.after(parms.SLEEP_TIME_MSEC, display_main_procedure)
