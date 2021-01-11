@@ -275,7 +275,7 @@ def get_refreshed_data(arg_url):
     # Got the data that was expected
     if parms.FLAG_TRACING:
         parms.logger.debug("get_refreshed_data: weather access success")
-        parms.logger.debug("get_refreshed_data: Data for display: temp={:.1f}, condition={}".format(temp, condition))
+        parms.logger.debug("get_refreshed_data: Data for display: temp={}, condition={}".format(temp, condition))
     return True, temp, condition
 
 def get_display_data():
@@ -328,7 +328,7 @@ def display_main_procedure():
     if flag_display_normal:
         display_cur_temp.config(fg=FG_COLOR_NORMAL)
         display_cur_cond.config(fg=FG_COLOR_NORMAL)
-        display_cur_temp.config(text="%s %s" % (str_temp, parms.TEMP_SUFFIX))
+        display_cur_temp.config(text="%s %s" % ({:.1f}.format(str_temp}, parms.TEMP_SUFFIX))
     else:
         display_cur_temp.config(fg=FG_COLOR_ABNORMAL)
         display_cur_cond.config(fg=FG_COLOR_ABNORMAL)
