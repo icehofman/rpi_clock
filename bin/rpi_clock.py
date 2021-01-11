@@ -328,7 +328,7 @@ def display_main_procedure():
     if flag_display_normal:
         display_cur_temp.config(fg=FG_COLOR_NORMAL)
         display_cur_cond.config(fg=FG_COLOR_NORMAL)
-        display_cur_temp.config(text="%s '\u000B0'%s" % ("{:.1f}".format(str_temp), parms.TEMP_SUFFIX))
+        display_cur_temp.config(text="%s \u00B0%s" % ("{:.1f}".format(str_temp), parms.TEMP_SUFFIX))
     else:
         display_cur_temp.config(fg=FG_COLOR_ABNORMAL)
         display_cur_cond.config(fg=FG_COLOR_ABNORMAL)
