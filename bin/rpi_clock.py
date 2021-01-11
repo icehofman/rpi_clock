@@ -35,7 +35,7 @@ FONT_STYLE = "normal"
 SPACER_SIZE = 20
 BUTTON_WIDTH = 6
 BUTTON_HEIGHT = 2
-FG_COLOR_NORMAL = "green"
+FG_COLOR_NORMAL = "blue"
 FG_COLOR_ABNORMAL = "red"
 BG_COLOR_ROOT = "black"
 BG_COLOR_POPUP = BG_COLOR_ROOT
@@ -275,7 +275,7 @@ def get_refreshed_data(arg_url):
     # Got the data that was expected
     if parms.FLAG_TRACING:
         parms.logger.debug("get_refreshed_data: weather access success")
-        parms.logger.debug("get_refreshed_data: Data for display: temp={}, condition={}".format(temp, condition))
+        parms.logger.debug("get_refreshed_data: Data for display: temp={:.1f}, condition={}".format(temp, condition))
     return True, temp, condition
 
 def get_display_data():
